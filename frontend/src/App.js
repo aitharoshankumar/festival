@@ -4,7 +4,7 @@ function App() {
   const [festivals, setFestivals] = useState([]);
 
   useEffect(() => {
-    fetch("/api/festivals")
+    fetch("http://54.196.229.34:5000/api/festivals")
       .then((res) => res.json())
       .then((data) => setFestivals(data))
       .catch((err) => console.error(err));
