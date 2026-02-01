@@ -17,10 +17,14 @@ const festivals = [
   { name: "Onam", date: "August", description: "Harvest festival of Kerala." }
 ];
 
+app.get("/", (req, res) => {
+  res.send("Backend API is running 🚀");
+});
+
 app.get("/api/festivals", (req, res) => {
   res.json(festivals);
 });
 
-app.listen(5000, () => {
+app.listen(5000, "0.0.0.0", () => {
   console.log("Backend running on port 5000");
 });
